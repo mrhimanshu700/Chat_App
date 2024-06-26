@@ -34,7 +34,7 @@ function Login() {
       };
 
       const { data } = await axios.post(
-        "api/user/login",
+        "https://chat-app-qxlf.onrender.com/user/login",
         {
           email,
           password: Password,
