@@ -39,7 +39,7 @@ function GroupChatModal({ children }) {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`https://chat-app-qxlf.onrender.com/user?search=${search}`, config);
+      const { data } = await axios.get(`https://chat-app-qxlf.onrender.com/api/user?search=${search}`, config);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -71,7 +71,7 @@ function GroupChatModal({ children }) {
         },
       };
       const { data } = await axios.post(
-        `https://chat-app-qxlf.onrender.com/chat/group`,
+        `https://chat-app-qxlf.onrender.com/api/chat/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
