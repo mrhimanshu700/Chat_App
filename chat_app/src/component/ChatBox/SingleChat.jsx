@@ -39,7 +39,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://chat-app-qxlf.onrender.com/message/${selectedChat._id}`,
         config
       );
       console.log(messages);
@@ -72,7 +72,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "/api/message",
+          "https://chat-app-qxlf.onrender.com/message",
           {
             content: newMessage,
             chatId: selectedChat,
