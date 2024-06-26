@@ -22,7 +22,7 @@ function MyChats({ fetchAgain }) {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get("https://chat-app-qxlf.onrender.com/chat", config);
       console.log(data);
       setChats(data);
     } catch (error) {
