@@ -11,7 +11,7 @@ const app = express()
 const port =process.env.PORT||  3000
 const dbUrl = process.env.MONGODB_URL;
 app.use(cors({
-  origin: 'https://chat-app-navy-iota.vercel.app/', // replace with your frontend's domain
+  origin: 'https://chat-app-navy-iota.vercel.app', // replace with your frontend's domain
 }));
 app.use(bodyParser.json());
 
