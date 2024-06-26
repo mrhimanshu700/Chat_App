@@ -49,7 +49,7 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain, fetchMessages }) {
         },
       };
       const { data } = await axios.put(
-        `/api/chat/groupremove`,
+        `https://chat-app-qxlf.onrender.com/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -104,7 +104,7 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain, fetchMessages }) {
         },
       };
       const { data } = await axios.put(
-        `/api/chat/groupadd`,
+        `https://chat-app-qxlf.onrender.com/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -138,7 +138,7 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain, fetchMessages }) {
         },
       };
       const { data } = await axios.put(
-        `/api/chat/rename`,
+        `https://chat-app-qxlf.onrender.com/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -177,7 +177,7 @@ function UpdateGroupChatModel({ fetchAgain, setFetchAgain, fetchMessages }) {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(`https://chat-app-qxlf.onrender.com/user?search=${search}`, config);
       console.log(data);
       setLoading(false);
       setSearchResult(data);
