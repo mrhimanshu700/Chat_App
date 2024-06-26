@@ -10,7 +10,9 @@ const messageRoutes= require("./src/route/messageRoutes.js")
 const app = express()
 const port =process.env.PORT||  3000
 const dbUrl = process.env.MONGODB_URL;
-app.use(cors());
+app.use(cors({
+  origin: 'https://chat-app-navy-iota.vercel.app/', // replace with your frontend's domain
+}));
 app.use(bodyParser.json());
 
 dbConnection();  
