@@ -43,7 +43,7 @@ function SignUp() {
         },
       };
       const { data } = await axios.post(
-        "https://chat-app-qxlf.onrender.com/user",
+        "https://chat-app-qxlf.onrender.com/api/user",
         {
           username: Username,
           email,
